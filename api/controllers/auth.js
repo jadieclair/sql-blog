@@ -2,6 +2,9 @@ import { db } from "../connect.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+// Controllers: Controllers contain the logic to handle different requests.
+// The controller fetches data from the database, processes it, and sends the response back to the client.
+
 export const register = (req, res) => {
   //CHECK USER IF EXISTS
 

@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./stories.scss";
 import { AuthContext } from "../../context/authContext";
 import { useQuery } from "@tanstack/react-query";
 import { makeRequest } from "../../axios";
+import AddNewStory from "./AddNewStory";
 
 const Stories = () => {
   const { currentUser } = useContext(AuthContext);

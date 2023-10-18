@@ -16,6 +16,7 @@ $themes: (
     border: #444,
   ),
 );
+// manage and reuse code,simplify maintenance and ensure consistency in your design.
 
 @mixin themify($themes) {
   @each $theme, $map in $themes {

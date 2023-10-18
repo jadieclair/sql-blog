@@ -16,6 +16,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/authContext";
 import Update from "../../components/update/Update";
 import { useState } from "react";
+// import { Button } from "@mui/material";
 
 const Profile = () => {
   const [openUpdate, setOpenUpdate] = useState(false);
@@ -23,7 +24,7 @@ const Profile = () => {
 
   const userId = parseInt(useLocation().pathname.split("/")[2]);
 
-  const { isLoading, error, data } = useQuery(["user"], () =>
+  const { isLoading, data } = useQuery(["user"], () =>
     makeRequest.get("/users/find/" + userId).then((res) => {
       return res.data;
     })
@@ -102,6 +103,7 @@ const Profile = () => {
                     <span>{data.website}</span>
                   </div>
                 </div>
+
                 {rIsLoading ? (
                   "loading"
                 ) : userId === currentUser.id ? (

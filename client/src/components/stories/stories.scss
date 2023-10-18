@@ -1,5 +1,14 @@
 @import "../../style.scss";
 
+.add-story {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: black;
+  padding: 10%;
+  z-index: 999;
+}
+
 .stories {
   display: flex;
   gap: 10px;
